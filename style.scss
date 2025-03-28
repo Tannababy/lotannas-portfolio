@@ -1,9 +1,145 @@
-.projects {
-    display: grid;
-    // grid-template-areas: ;
+@use "./media-queries";
 
-    &projects__card {
-        
+body {
+  padding: 10px 60px;
+}
+
+#developer-name {
+  display: inline-block;
+  color: purple;
+  font-size: 20px;
+}
+
+.header {
+  @include media-queries.mobile {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__navbar {
+    &--links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      text-decoration: none;
+    }
+  }
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.intro {
+  @include media-queries.mobile {
+    flex-direction: column;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  margin: 200px 50px 100px 50px;
+
+  &__text {
+    &--header {
+      @include media-queries.mobile {
+        font-size: 15px;
+      }
+      font-size: 20px;
     }
 
+    &--para {
+      font-size: 50px;
+    }
+  }
+
+  &__img {
+    @include media-queries.mobile {
+      display: none;
+    }
+  }
+}
+
+.about {
+  @include media-queries.mobile {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  display: flex;
+  justify-content: space-evenly;
+  margin: 200px 0 50px 0;
+}
+
+.skills {
+  @include media-queries.mobile {
+    padding: 0;
+  }
+  padding: 50px 300px;
+  text-align: center;
+
+  &__list {
+    @include media-queries.mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 5px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+
+    &-img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.projects {
+  &__header {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.projects__container {
+  @include media-queries.mobile {
+    grid: none;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  &--card--img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.contact {
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //   &__text {
+  //   }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+  }
 }

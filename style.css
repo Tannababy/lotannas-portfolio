@@ -1,5 +1,138 @@
-.projects {
+body {
+  padding: 10px 60px;
+}
+
+#developer-name {
+  display: inline-block;
+  color: purple;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    display: none;
+  }
+}
+.header__navbar--links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  margin: 200px 50px 100px 50px;
+}
+@media only screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+.intro__text--header {
+  font-size: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .intro__text--header {
+    font-size: 15px;
+  }
+}
+.intro__text--para {
+  font-size: 50px;
+}
+@media only screen and (max-width: 480px) {
+  .intro__img {
+    display: none;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 200px 0 50px 0;
+}
+@media only screen and (max-width: 480px) {
+  .about {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+.skills {
+  padding: 50px 300px;
+  text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .skills {
+    padding: 0;
+  }
+}
+.skills__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+}
+@media only screen and (max-width: 480px) {
+  .skills__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
+}
+.skills__list-img {
+  width: 50px;
+  height: 50px;
+}
+
+.projects__header {
+  font-size: 25px;
+  text-align: center;
+}
+
+.projects__container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+@media only screen and (max-width: 480px) {
+  .projects__container {
+    grid: none;
+  }
+}
+.projects__container--card--img {
+  width: 400px;
+  height: 400px;
+}
+
+.contact {
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
