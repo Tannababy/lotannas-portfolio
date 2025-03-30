@@ -98,6 +98,14 @@ main {
   }
 }
 
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "image header" "image text";
+  gap: 20px;
+  align-items: center;
+}
 @media only screen and (max-width: 576px) {
   .about {
     display: flex;
@@ -106,8 +114,8 @@ main {
   }
 }
 .about__img {
-  width: 30%;
-  height: 40%;
+  width: 40%;
+  height: 50%;
   padding-right: 20px;
 }
 @media only screen and (max-width: 576px) {
@@ -251,4 +259,4 @@ main {
   padding-left: 20px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cssclear.map */

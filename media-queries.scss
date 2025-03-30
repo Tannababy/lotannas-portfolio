@@ -1,5 +1,5 @@
-$mobile: 480px;
-$desktop: 1025px;
+$mobile: 576px;
+$desktop: 1200px;
 
 @mixin mobile {
   @media only screen and (max-width: $mobile) {
