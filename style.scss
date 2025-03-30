@@ -81,9 +81,6 @@ main {
     &-para {
       font-size: 75px;
       font-weight: bold;
-      @include media-queries.mobile {
-        font-size: typography.$sub-heading-font-size;
-      }
     }
   }
 
@@ -104,7 +101,7 @@ main {
 
   @include media-queries.mobile {
     flex-direction: column;
-    margin: 120px 0 0 0;
+    margin: 80px 0 0 0;
   }
 
   &__img {
@@ -113,25 +110,31 @@ main {
     padding-right: 20px;
 
     @include media-queries.mobile {
-      width: 300px;
-      height: 350px;
+      width: 35vh;
+      height: 45vh;
     }
   }
 
-  &__text {
-    margin: 100px;
+  &__header {
+    font-size: typography.$sub-heading-font-size;
+    text-align: center;
 
-    &-header {
-      font-size: typography.$sub-heading-font-size;
+    @include media-queries.mobile {
+      font-size: typography.$mobile-sub-heading-font-size;
     }
 
     &-para {
       font-size: typography.$paragraph-font-size;
     }
   }
+
+  &__text {
+    margin: 50px 0;
+  }
 }
 
 .skills {
+  margin-top: 100px;
   @include media-queries.mobile {
     padding: 0;
   }
@@ -193,19 +196,20 @@ main {
     flex-direction: column;
     gap: 70px;
     margin: 0;
+    margin-bottom: 70px;
   }
 
   &-card {
     &-background {
-      background-color: palette.$fairy-tale;
-      padding: 50px 15px 0;
+      background-color: hsla(343, 51%, 83%, 0.5);
+      padding: 50px 20px 0;
 
       &-img {
-        width: 500px;
+        width: 800px;
         height: 500px;
 
         @include media-queries.mobile {
-          width: 300px;
+          width: 350px;
           height: 250px;
         }
       }
@@ -214,6 +218,14 @@ main {
     &-heading {
       font-size: typography.$projects-font-size;
       margin: 25px 0;
+    }
+
+    &-btn {
+      box-shadow: 8px 5px 5px rgba(318, 34%, 48%, 0.5);
+      border-radius: 5%;
+      padding: 10px;
+      font-size: typography.$paragraph-font-size;
+      font-weight: bold;
     }
   }
 }
@@ -231,9 +243,6 @@ main {
     flex-direction: column-reverse;
     justify-content: space-evenly;
   }
-
-  //   &__text {
-  //   }
 
   &__list {
     display: flex;
