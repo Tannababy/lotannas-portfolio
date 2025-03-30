@@ -9,20 +9,22 @@
   <body>
     <header class="header">
       <!-- Name -->
-      <h1 id="developer-name">Lotanna Amobi</h1>
+      <h1 id="developerName">Lotanna Amobi</h1>
       <!-- navbar -->
       <nav class="header__navbar">
         <!-- links to page sections -->
-        <ul class="header__navbar--links">
+        <ul class="header__navbar-list">
           <!--link to about section-->
-          <li class=""><a href="#Home">Home</a></li>
+          <li class="header__navbar-list-link"><a href="#Home">Home</a></li>
           <!--link to about section-->
-          <li class=""><a href="#about">About</a></li>
+          <li class="header__navbar-list-link"><a href="#about">About</a></li>
           <!--link to projects section-->
-          <li class=""><a href="#projects">Projects</a></li>
+          <li class="header__navbar-list-link">
+            <a href="#projects">Projects</a>
+          </li>
         </ul>
         <!--contact button-->
-        <a href="#contact"><button>Contact</button></a>
+        <a href="#contact" class="header__navbar-btn">Contact</a>
       </nav>
     </header>
     <main>
@@ -30,9 +32,9 @@
         <!--About section = intro, skills and picture-->
         <!-- div with header and paragraph -->
         <div class="intro__text">
-          <h2 class="intro__text--header">👋🏾 Hey, I'm Lotanna Amobi</h2>
-          <p class="intro__text--para">
-            A junior software developer based in London.
+          <h2 class="intro__text-header">👋🏾 Hey, I'm Lotanna Amobi</h2>
+          <p class="intro__text-para">
+            A Junior Software Developer based in London.
           </p>
         </div>
         <!-- image -->
@@ -44,19 +46,20 @@
       </section>
       <section id="about" class="about">
         <img
-          src="https://placehold.co/600x400/png"
+          src="./images/portrait.JPG"
           alt="picture of developer"
+          class="about__img"
         />
-        <div>
-          <h3>About Me</h3>
-          <p>
+        <div class="about__text">
+          <h3 class="about__text-header">About Me</h3>
+          <p class="about__text-para">
             I'm a pharmacy graduate with a strong foundation in problem-solving,
             attention to detail, and a customer-first mindset, developed through
             my studies and experience in customer service roles. Over time, I
             discovered my passion for technology and how it can be used to
             improve processes and enhance user experiences.
           </p>
-          <p>
+          <p class="about__text-para">
             This inspired me to transition into tech, and I've been building my
             skills in HTML, CSS, JavaScript, and Python. I've worked on small
             projects to apply these skills, further developing my ability to
@@ -71,30 +74,32 @@
         <h3 class="skills__header">Technical Skills</h3>
         <p class="skill__summary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <ul class="skills__list">
           <li>
-            Git <img src="./images/git.png" alt="" class="skills__list-img" />
+            <img src="./images/git.png" alt="" class="skills__list-img" />
+            <p>Git</p>
           </li>
           <li>
-            HTML5
             <img src="./images/html5.png" alt="" class="skills__list-img" />
+            <p>HTML5</p>
           </li>
           <li>
-            CSS3 <img src="./images/css3.png" alt="" class="skills__list-img" />
+            <img src="./images/css3.png" alt="" class="skills__list-img" />
+            <p>CSS3</p>
           </li>
           <li>
-            Javascript
             <img src="./images/js.png" alt="" class="skills__list-img" />
+            <p>Javascript</p>
           </li>
           <li>
-            SCSS <img src="./images/scss.png" alt="" class="skills__list-img" />
+            <img src="./images/scss.png" alt="" class="skills__list-img" />
+            <p>SCSS</p>
           </li>
           <li>
-            BEM <img src="./images/bem.png" alt="" class="skills__list-img" />
+            <img src="./images/bem.png" alt="" class="skills__list-img" />
+            <p>BEM</p>
           </li>
         </ul>
       </section>
@@ -102,46 +107,54 @@
         <h3 class="projects__header">Projects</h3>
         <!--Projects cards-->
         <div class="projects__container">
-          <div class="projects__container--card">
-            <img
-              src="./images/project-card.png"
-              alt=""
-              class="projects__container--card--img"
-            />
-            <h4>Project 1</h4>
+          <div class="projects__container-card">
+            <div class="projects__container-card-background">
+              <img
+                src="./images/project-card.png"
+                alt=""
+                class="projects__container-card-background-img"
+              />
+            </div>
+            <h4 class="projects__container-card-heading">Project 1</h4>
             <p>Background information about project</p>
             <a href="" target="_blank"><button>Preview project</button></a>
             <a href="" target="_blank"><button>Code</button></a>
           </div>
-          <div class="projects__container--card">
-            <img
-              src="./images/project-card.png"
-              alt=""
-              class="projects__container--card--img"
-            />
-            <h4>Project 2</h4>
+          <div class="projects__container-card">
+            <div class="projects__container-card-background">
+              <img
+                src="./images/project-card.png"
+                alt=""
+                class="projects__container-card-background-img"
+              />
+            </div>
+            <h4 class="projects__container-card-heading">Project 2</h4>
             <p>Background information about project</p>
             <a href="" target="_blank"><button>Preview project</button></a>
             <a href="" target="_blank"><button>Code</button></a>
           </div>
-          <div class="projects__container--card">
-            <img
-              src="./images/project-card.png"
-              alt=""
-              class="projects__container--card--img"
-            />
-            <h4>Project 3</h4>
+          <div class="projects__container-card">
+            <div class="projects__container-card-background">
+              <img
+                src="./images/project-card.png"
+                alt=""
+                class="projects__container-card-background-img"
+              />
+            </div>
+            <h4 class="projects__container-card-heading">Project 3</h4>
             <p>Background information about project</p>
             <a href="" target="_blank"><button>Preview project</button></a>
             <a href="" target="_blank"><button>Code</button></a>
           </div>
-          <div class="projects__container--card">
-            <img
-              src="./images/project-card.png"
-              alt=""
-              class="projects__container--card--img"
-            />
-            <h4>Project 4</h4>
+          <div class="projects__container-card">
+            <div class="projects__container-card-background">
+              <img
+                src="./images/project-card.png"
+                alt=""
+                class="projects__container-card-background-img"
+              />
+            </div>
+            <h4 class="projects__container-card-heading">Project 4</h4>
             <p>Background information about project</p>
             <a href="" target="_blank"><button>Preview project</button></a>
             <a href="" target="_blank"><button>Code</button></a>
@@ -151,11 +164,25 @@
     </main>
     <footer id="contact" class="contact">
       <!-- Contact section -->
-      <p class="contact__text">Get in touch 😊</p>
+      <p class="contact__text">tannaloamobi@gmail.com</p>
       <ul class="contact__list">
-        <li class="contact__list-link">LinkedIn</li>
-        <li class="contact__list-link">GitHub</li>
-        <li class="contact__list-link">Email</li>
+        <li class="contact__list-link">
+          <a href="https://github.com/Tannababy" target="_blank"
+            ><img src="./images/github-icon.png" alt="github icon"
+          /></a>
+        </li>
+        <li class="contact__list-link">
+          <a
+            href="https://www.linkedin.com/in/lotanna-amobi-b83750210/"
+            target="_blank"
+            ><img src="./images/linkedin-icon.png" alt="linkedin icon"
+          /></a>
+        </li>
+        <li class="contact__list-link">
+          <a href="./LotannaAmobi-NewProfileCV.docx.pdf" target="_blank"
+            ><img src="./images/cv-icon.png" alt="linkedin icon"
+          /></a>
+        </li>
       </ul>
     </footer>
   </body>

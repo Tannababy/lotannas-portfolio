@@ -1,60 +1,89 @@
 @use "./media-queries";
+@use "./typography.scss";
+@use "./palette.scss";
 
-body {
-  padding: 10px 60px;
+* {
+  font-family: typography.$default-font;
 }
 
-#developer-name {
-  display: inline-block;
-  color: purple;
+body {
+  margin: 0;
+}
+
+header,
+main {
+  margin: 50px 100px 0;
+
+  @include media-queries.mobile {
+    margin: 50px 50px 0;
+  }
+}
+
+#developerName {
+  color: palette.$magenta-haze;
   font-size: 20px;
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  //   align-items: center;
+
   @include media-queries.mobile {
     display: none;
   }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   &__navbar {
-    &--links {
+    display: flex;
+    flex-direction: row;
+
+    &-list {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       list-style: none;
+
+      &-link {
+        padding-left: 50px;
+      }
+    }
+
+    &-btn {
       text-decoration: none;
+      border: 2px solid black;
+      border-radius: 10%;
+      padding: 10px;
+      margin-left: 50px;
+      box-shadow: 8px 5px 5px rgba(318, 34%, 48%, 0.5);
     }
   }
-}
-
-img {
-  width: 200px;
-  height: 200px;
 }
 
 .intro {
-  @include media-queries.mobile {
-    flex-direction: column;
-  }
-
   display: flex;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 0 50px;
   margin: 200px 50px 100px 50px;
 
+  @include media-queries.mobile {
+    padding: 0;
+    margin: 0;
+  }
+
   &__text {
-    &--header {
+    &-header {
+      font-size: typography.$sub-heading-font-size;
+      font-weight: normal;
       @include media-queries.mobile {
-        font-size: 15px;
+        font-size: typography.$paragraph-font-size;
       }
-      font-size: 20px;
     }
 
-    &--para {
-      font-size: 50px;
+    &-para {
+      font-size: 75px;
+      font-weight: bold;
+      @include media-queries.mobile {
+        font-size: typography.$sub-heading-font-size;
+      }
     }
   }
 
@@ -62,37 +91,75 @@ img {
     @include media-queries.mobile {
       display: none;
     }
+
+    width: 600px;
+    height: 600px;
   }
 }
 
 .about {
-  @include media-queries.mobile {
-    flex-direction: column;
-    margin: auto;
-  }
-
   display: flex;
   justify-content: space-evenly;
   margin: 200px 0 50px 0;
+
+  @include media-queries.mobile {
+    flex-direction: column;
+    margin: 120px 0 0 0;
+  }
+
+  &__img {
+    width: 600px;
+    height: 700px;
+    padding-right: 20px;
+
+    @include media-queries.mobile {
+      width: 300px;
+      height: 350px;
+    }
+  }
+
+  &__text {
+    margin: 100px;
+
+    &-header {
+      font-size: typography.$sub-heading-font-size;
+    }
+
+    &-para {
+      font-size: typography.$paragraph-font-size;
+    }
+  }
 }
 
 .skills {
   @include media-queries.mobile {
     padding: 0;
   }
+
+  &__header {
+    font-size: typography.$sub-heading-font-size;
+
+    @include media-queries.mobile {
+      font-size: typography.$mobile-sub-heading-font-size;
+    }
+  }
+
   padding: 50px 300px;
   text-align: center;
 
   &__list {
+    margin-top: 50px;
     @include media-queries.mobile {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       grid-gap: 5px;
+      padding: 0;
+      margin-top: 60px;
     }
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
     list-style: none;
 
@@ -105,32 +172,65 @@ img {
 
 .projects {
   &__header {
-    font-size: 25px;
+    font-size: typography.$sub-heading-font-size;
     text-align: center;
+
+    @include media-queries.mobile {
+      font-size: typography.$mobile-sub-heading-font-size;
+    }
   }
 }
 
 .projects__container {
-  @include media-queries.mobile {
-    grid: none;
-  }
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 10px;
+  margin: auto 25px;
 
-  &--card--img {
-    width: 400px;
-    height: 400px;
+  @include media-queries.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin: 0;
+  }
+
+  &-card {
+    &-background {
+      background-color: palette.$fairy-tale;
+      padding: 50px 15px 0;
+
+      &-img {
+        width: 500px;
+        height: 500px;
+
+        @include media-queries.mobile {
+          width: 300px;
+          height: 250px;
+        }
+      }
+    }
+
+    &-heading {
+      font-size: typography.$projects-font-size;
+      margin: 25px 0;
+    }
   }
 }
 
 .contact {
-  background-color: purple;
+  background-color: palette.$magenta-haze;
+  color: whitesmoke;
+  height: 25vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 150px;
+
+  @include media-queries.mobile {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
 
   //   &__text {
   //   }
@@ -138,8 +238,13 @@ img {
   &__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     text-decoration: none;
+    padding-left: 0;
+
+    &-link {
+      padding-left: 20px;
+    }
   }
 }
