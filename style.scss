@@ -108,7 +108,7 @@ main {
 
   &__img {
     width: 30%;
-      height: 40%;
+    height: 40%;
     padding-right: 20px;
 
     @include media-queries.mobile {
@@ -204,11 +204,12 @@ main {
   &-card {
     &-background {
       background-color: hsla(343, 51%, 83%, 0.5);
-      padding: 50px 20px 0;
+      max-width: 70%;
+      padding: 50px 50px 10px 10px;
 
       &-img {
-        max-width: 100%;
-        height: auto;
+        max-width: 50%;
+        max-height: 50%;
 
         @include media-queries.mobile {
           max-width: 100%;
@@ -231,6 +232,12 @@ main {
       font-weight: bold;
     }
   }
+}
+
+.naughts-crosses-game {
+  max-height: 250px;
+  max-width: 300px;
+  margin-left: 30px;
 }
 
 .contact {
